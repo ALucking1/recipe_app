@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class WeatherRecipe < Sinatra::Base
   get '/' do
-    'Hello WeatherRecipe!'
+    erb :index
   end
 
   # start the server if ruby file executed directly
