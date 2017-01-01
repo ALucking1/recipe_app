@@ -7,7 +7,7 @@ class WeatherApi
     response = RestClient.get(url)
     hash = JSON.parse(response)
     hash['main'].each do |x|
-      @value = x[1]
+      return @value = x[1]
     end
   end
 
