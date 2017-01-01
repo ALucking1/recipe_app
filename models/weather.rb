@@ -1,3 +1,6 @@
+require 'json'
+require 'rest-client'
+
 class WeatherApi
 
   def get_api

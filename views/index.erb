@@ -1,4 +1,15 @@
-<h1><%= @weather.intro %> It's <%= @weather.get_api %>°C outside.</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link type="text/css", rel="stylesheet", href="stylesheet.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <h1><%= @weather.intro %> It's <%= @weather.get_api %>°c outside.</h1>
 
-<h1>How about...</h1>
-<h2><%=['Soup', 'Casserole', 'Caesar Salad', 'Spaghetti Bolognese'].sample%></h2>
+    <h1>How about...</h1>
+    <h2><%=['Soup', 'Casserole', 'Caesar Salad', 'Spaghetti Bolognese'].sample%></h2>
+  </body>
+</html>
