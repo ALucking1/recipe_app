@@ -1,0 +1,17 @@
+body {
+  background-color: #10bca0;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  margin: 150px;
+}
+
+h1 {
+  color: #ef5db5;
+  font-size: 50px;
+  /*font-family: 'Pacifico', cursive;*/
+}
+
+h2 {
+  color: #efdb67;
+  font-size: 40px;
+}

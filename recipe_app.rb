@@ -1,6 +1,4 @@
 require 'sinatra/base'
-require 'json'
-require 'rest-client'
 require './models/weather.rb'
 
 class WeatherRecipe < Sinatra::Base
