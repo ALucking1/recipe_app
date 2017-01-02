@@ -28,12 +28,12 @@ class WeatherApi
 
   def recipe
     if get_api < 10
+      
+    elsif get_api >= 10 && get_api < 15
 
-    elsif get_api < 15 && get_api > 10
+    elsif get_api >= 15 && get_api < 20
 
-    elsif get_api < 20 && get_api > 15
-
-    elsif get_api < 30 && get_api > 20
+    elsif get_api >= 20 && get_api < 30
 
     else
 
