@@ -4,7 +4,7 @@ require_relative 'recipe'
 
 class WeatherApi
 
-  attr_reader :recipe, :response
+  attr_reader :recipe, :url, :title
 
   def initialize
     @recipe = Recipe.new
