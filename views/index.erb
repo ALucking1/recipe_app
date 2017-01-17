@@ -8,8 +8,7 @@
   </head>
   <body>
     <h1><%= @weather.intro %> It's <%= @weather.get_api %>°c outside.</h1>
-
     <h1>How about...</h1>
-    <h2><%=['Soup', 'Casserole', 'Caesar Salad', 'Spaghetti Bolognese'].sample%></h2>
+    <a href="<%=@weather.recipe_sample%>">Recipe</a>
   </body>
 </html>
