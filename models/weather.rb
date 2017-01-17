@@ -37,13 +37,13 @@ class WeatherApi
     if get_api < 10
       @recipe.brrr_days[:url]
     elsif get_api >= 10 && get_api < 15
-      "not yet"
+      @recipe.not_too_cold_days[:url]
     elsif get_api >= 15 && get_api < 20
-      "not yet"
+      @recipe.mild_days[:url]
     elsif get_api >= 20 && get_api < 30
-      "not yet"
+      @recipe.balmy_days[:url]
     else
-      "not yet"
+      @recipe.hot_days[:url]
     end
   end
 
