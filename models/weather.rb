@@ -4,6 +4,8 @@ require_relative 'recipe'
 
 class WeatherApi
 
+  attr_reader :recipe, :response
+
   def initialize
     @recipe = Recipe.new
   end
@@ -33,7 +35,7 @@ class WeatherApi
 
   def recipe_sample
     if get_api < 10
-      @recipe.cold_days
+      @recipe.brrr_days[:url]
     elsif get_api >= 10 && get_api < 15
       "not yet"
     elsif get_api >= 15 && get_api < 20

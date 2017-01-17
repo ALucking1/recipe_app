@@ -1,9 +1,11 @@
 require 'sinatra/base'
 require './models/weather.rb'
+require './models/recipe.rb'
 
 class WeatherRecipe < Sinatra::Base
   get '/' do
     @weather = WeatherApi.new
+    @recipe = Recipe.new
     erb :index
   end
 
