@@ -1,8 +1,12 @@
 body {
-  background-color: #10bca0;
+  background-color: #1dc5e2;
   font-family: 'Pacifico', cursive;
   text-align: center;
   margin: 150px;
+}
+
+* {
+  cursor: url("/Users/annalucking/Downloads/imageedit_34_3905293136.png"), auto;
 }
 
 h1 {
@@ -10,7 +14,24 @@ h1 {
   font-size: 50px;
 }
 
-h2 {
+/*a {
+  cursor: url("/Users/annalucking/Downloads/imageedit_32_9566290240.png"), default;
+}*/
+
+a:link {
   color: #efdb67;
+  text-decoration: none;
   font-size: 40px;
+}
+
+a:visited {
+  color: #efdb67;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+a:hover {
+    color: #1ae2ed;
+    text-decoration: none;
+    cursor: url("/Users/annalucking/Downloads/imageedit_34_3905293136.png"), auto;
 }
