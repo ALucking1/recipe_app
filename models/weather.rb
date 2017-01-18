@@ -6,8 +6,12 @@ class WeatherApi
 
   attr_reader :recipe, :url, :title
 
-  def initialize
-    @recipe = Recipe.new
+  # def initialize
+  #   @recipe = Recipe.new
+  # end
+
+  def brrr_days
+    {:url => "http://www.bbcgoodfood.com/recipes/3444/saras-chilli-con-carne", :title => "Chilli Con Carne"}
   end
 
   def get_api
@@ -35,7 +39,8 @@ class WeatherApi
 
   def recipe_sample
     if get_api < 10
-      @recipe.brrr_days[:url]
+      @url = brrr_days[:url]
+      @title = brrr_days[:title]
     elsif get_api >= 10 && get_api < 15
       @recipe.not_too_cold_days[:url]
     elsif get_api >= 15 && get_api < 20
