@@ -5,7 +5,7 @@ require './models/recipe.rb'
 class WeatherRecipe < Sinatra::Base
   get '/' do
     @weather = WeatherApi.new
-    @recipe = Recipe.new
+    @weather.recipe_sample
     erb :index
   end
 
