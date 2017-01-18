@@ -1,8 +1,12 @@
 body {
-  background-color: #10bca0;
+  background-color: #1dc5e2;
   font-family: 'Pacifico', cursive;
   text-align: center;
   margin: 150px;
+}
+
+* {
+  cursor: url(' http://cur.cursors-4u.net/food/foo-5/foo429.cur'), auto;
 }
 
 h1 {
@@ -10,7 +14,13 @@ h1 {
   font-size: 50px;
 }
 
-h2 {
+a {
   color: #efdb67;
+  text-decoration: none;
   font-size: 40px;
+}
+
+a:hover {
+    color: #1ae2ed;
+    text-decoration: none;
 }

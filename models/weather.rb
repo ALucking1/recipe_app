@@ -1,10 +1,17 @@
 require 'json'
 require 'rest-client'
+require_relative 'recipe'
 
 class WeatherApi
 
+  attr_reader :recipe, :url, :title
+
+  def initialize
+    @recipe = Recipe.new
+  end
+
   def get_api
-    url = 'http://api.openweathermap.org/data/2.5/weather?q=Sydney&units=metric&APPID=b4d9ad4b01c56f6638dcdd451d752a2f'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=b4d9ad4b01c56f6638dcdd451d752a2f'
     response = RestClient.get(url)
     hash = JSON.parse(response)
     hash['main'].each do |x|
@@ -26,17 +33,17 @@ class WeatherApi
     end
   end
 
-  def recipe
+  def recipe_sample
     if get_api < 10
-      
+      @recipe.brrr_days[:url]
     elsif get_api >= 10 && get_api < 15
-
+      @recipe.not_too_cold_days[:url]
     elsif get_api >= 15 && get_api < 20
-
+      @recipe.mild_days[:url]
     elsif get_api >= 20 && get_api < 30
-
+      @recipe.balmy_days[:url]
     else
-
+      @recipe.hot_days[:url]
     end
   end
 
