@@ -35,20 +35,25 @@ class WeatherApi
 
   def recipe_sample
     if get_api < 10
-      @url = @recipe.brrr_days[:url]
-      @title = @recipe.brrr_days[:title]
+      @recipe.brrr_days
+      @url = @recipe.rand_rec[0]
+      @title = @recipe.rand_rec[1]
     elsif get_api >= 10 && get_api < 15
-      @url = @recipe.not_too_cold_days[:url]
-      @title =  @recipe.not_too_cold_days[:title]
+      @recipe.not_too_cold_days
+      @url = @recipe.rand_rec[0]
+      @title = @recipe.rand_rec[1]
     elsif get_api >= 15 && get_api < 20
-      @url = @recipe.mild_days[:url]
-      @title = @recipe.mild_days[:title]
+      @recipe.mild_days
+      @url = @recipe.rand_rec[0]
+      @title = @recipe.rand_rec[1]
     elsif get_api >= 20 && get_api < 30
-      @url = @recipe.balmy_days[:url]
-      @title = @recipe.balmy_days[:title]
+      @recipe.balmy_days
+      @url = @recipe.rand_rec[0]
+      @title = @recipe.rand_rec[1]
     else
-      @url = @recipe.hot_days[:url]
-      @title = @recipe.hot_days[:title]
+      @recipe.hot_days
+      @url = @recipe.rand_rec[0]
+      @title = @recipe.rand_rec[1]
     end
   end
 
