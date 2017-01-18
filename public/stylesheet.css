@@ -6,7 +6,7 @@ body {
 }
 
 * {
-  cursor: url("/Users/annalucking/Downloads/imageedit_34_3905293136.png"), auto;
+  cursor: url(' http://cur.cursors-4u.net/food/foo-5/foo429.cur'), auto;
 }
 
 h1 {
@@ -14,17 +14,7 @@ h1 {
   font-size: 50px;
 }
 
-/*a {
-  cursor: url("/Users/annalucking/Downloads/imageedit_32_9566290240.png"), default;
-}*/
-
-a:link {
-  color: #efdb67;
-  text-decoration: none;
-  font-size: 40px;
-}
-
-a:visited {
+a {
   color: #efdb67;
   text-decoration: none;
   font-size: 40px;
@@ -33,5 +23,4 @@ a:visited {
 a:hover {
     color: #1ae2ed;
     text-decoration: none;
-    cursor: url("/Users/annalucking/Downloads/imageedit_34_3905293136.png"), auto;
 }
