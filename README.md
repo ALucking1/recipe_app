@@ -1,6 +1,11 @@
 # RecipeApp
 A ruby sinatra app that finds the current temperature in London and provides you with a suitable recipe.
 
+## How to use it
+- Clone this repo 
+- Run Sinatra
+- Go to localhost:4567
+
 ## How does it work?
 The app uses the OpenWeatherAPI to find the current temperature, which is then split into five groups from super cold to boiling hot and takes a random recipe from a predetermined selection. Refreshing the page returns a different recipe.
 
@@ -10,3 +15,4 @@ The app uses the OpenWeatherAPI to find the current temperature, which is then s
 - Refactor, refactor, refactor!
 - Allow the user to enter their own location for current temp
 - Scrape website for recipes containing keywords
+- Host on Heroku
