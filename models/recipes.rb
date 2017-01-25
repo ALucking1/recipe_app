@@ -1,4 +1,4 @@
-class Recipe
+class Recipes
 
   attr_reader :rand_rec
 

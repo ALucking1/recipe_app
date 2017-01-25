@@ -1,14 +1,7 @@
 require 'json'
 require 'rest-client'
-require_relative 'recipe'
 
-class WeatherApi
-
-  attr_reader :recipe, :url, :title
-
-  def initialize
-    @recipe = Recipe.new
-  end
+class Weather
 
   def get_api
     url = 'http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=b4d9ad4b01c56f6638dcdd451d752a2f'
@@ -30,30 +23,6 @@ class WeatherApi
       'Well, it\'s positively balmy!'
     else
       'You want to eat?!'
-    end
-  end
-
-  def recipe_sample
-    if get_api < 10
-      @recipe.brrr_days
-      @url = @recipe.rand_rec[0]
-      @title = @recipe.rand_rec[1]
-    elsif get_api >= 10 && get_api < 15
-      @recipe.not_too_cold_days
-      @url = @recipe.rand_rec[0]
-      @title = @recipe.rand_rec[1]
-    elsif get_api >= 15 && get_api < 20
-      @recipe.mild_days
-      @url = @recipe.rand_rec[0]
-      @title = @recipe.rand_rec[1]
-    elsif get_api >= 20 && get_api < 30
-      @recipe.balmy_days
-      @url = @recipe.rand_rec[0]
-      @title = @recipe.rand_rec[1]
-    else
-      @recipe.hot_days
-      @url = @recipe.rand_rec[0]
-      @title = @recipe.rand_rec[1]
     end
   end
 
